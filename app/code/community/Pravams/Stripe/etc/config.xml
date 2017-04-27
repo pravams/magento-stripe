@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Pravams Stripe Module
+ *
+ * @category    Pravams
+ * @package     Pravams_Stripe
+ * @copyright   Copyright (c) 2015 Pravams LLC. (http://www.pravams.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Pravams_Stripe>
+            <version>0.1.0</version>
+        </Pravams_Stripe>
+    </modules>
+    <global>
+        <!--<blocks>-->
+            <!--<pravams_stripe>-->
+                <!--<class>Pravams_Stripe_Block</class>-->
+            <!--</pravams_stripe>-->
+        <!--</blocks>-->
+        <models>
+            <pravams_stripe>
+                <class>Pravams_Stripe_Model</class>
+            </pravams_stripe>
+        </models>
+    </global>
+    <default>
+        <payment>
+            <stripe>
+                <active>0</active>
+                <model>pravams_stripe/paymentMethod</model>
+                <order_status>pending</order_status>
+                <title>Credit Card (Stripe)</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize_capture</payment_action>
+                <allowspecific>0</allowspecific>
+            </stripe>
+        </payment>
+    </default>
+</config>
